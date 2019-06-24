@@ -1,0 +1,23 @@
+<%- include("../partials/header") %>
+
+<h1>New Cluck</h1>
+
+<form action="/clucks" method="POST">
+  <div>
+   <input type="hidden" name="username" value="<%= username %>">
+    <input type="text" name="image_url" placeholder="Link to your image ==>">
+  </div>
+
+  <div>
+    <textarea
+      name="content"
+      cols="50"
+      rows="10"
+      placeholder="Enter your Cluck message here "
+    ></textarea>
+  </div>
+
+  <input type="submit" value="Create Cluck">
+</form>
+
+<%- include("../partials/footer") %>

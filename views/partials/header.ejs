@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cluckr Quiz Application</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="/scripts/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+  <a href="/clucks/">
+  <img border="1" alt="Clucker App" src="/images/cluckr.gif" width="75" height="75"></a>
+
+       
+
+      <% if (username) { %>
+        
+        <a href='/clucks/new'><button>New Cluck Entry</button></a>
+        <span>
+          😎 <%= username %>
+        </span>
+
+
+
+        <form class="sign-out-form" action="/sign_out" method="POST">
+          <input type="submit" value="Sign Out">
+        </form>
+      <% } else { %>     
+      
+      <a href='/signin'><button>Sign In</button></a>
+
+        
+      <% } %>
+    </nav>
+  </header>
+
+  <main>

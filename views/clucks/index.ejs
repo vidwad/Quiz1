@@ -1,0 +1,27 @@
+<%- include("../partials/header") %>
+
+<h1>All the Clucks</h1>
+
+<ul>
+  <% for (let cluck of clucks) { %>
+
+
+
+    <li>
+      <p>User <%= cluck.username %></p><br>
+        <small>Created at <%= cluck.createdAt %></small><br>
+         <p> <%= cluck.content %> </p>
+       <small> <%= cluck.image_url %> </small><br><br>
+       <img 
+       class="cluck-img"
+       src=<%= cluck.image_url %>
+       height="300px"
+       ><br><br><br>
+
+
+    </li>
+  <% } %>
+</ul>
+
+
+<%- include("../partials/footer") %>
