@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       database: 'cluckrdb',
       username: 'vidwad',
-      password: 'AshNatIsy1',
+      password: 'abcd',
     },
     migrations: {
       directory: './db/migrations'
